@@ -1,9 +1,11 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Header from "@/components/header";
 import "./globals.css";
+import type { Metadata } from "next";
+import { Inter, Montserrat } from "next/font/google";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"], weight: ['400', '700', '900'] });
 
 export const metadata: Metadata = {
   title: "David PM",
@@ -20,9 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${montserrat.className} bg-ellipse-first antialiased bg-[#151515]`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

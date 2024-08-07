@@ -1,13 +1,16 @@
 import Image from "next/image"
 const Header = () => {
+  
   return (
-    <div className="fixed top-0 flex justify-between items-center w-full p-4 md:px-24 bg-[#1c1d26]">
-      <span className="tracking-widest">
-        WebCrafter
+    <div className="flex items-center justify-between my-10 container mx-auto">
+      <span className="text-2xl text-white font-bold">
+        davepm
       </span>
-      <button className="rounded-md font-bold text-xs text-white bg-[#ff6663] p-4 ">
-        HIRE ME
-      </button>
+      <div className="flex items-center gap-8">
+        <Image src="/icons/github.png" alt="github icono" width={30} height={30}/>
+        <Image src="/icons/linkedin.png" alt="linkedin icono" width={30} height={30}/>
+        <Image src="/icons/twitter.png" alt="twitter icono" width={30} height={30}/>
+      </div>
     </div>
   )
 }
